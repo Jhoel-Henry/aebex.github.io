@@ -1,0 +1,551 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AEBEX - Red Académica Boliviana en el Exterior</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&family=Lexend+Deca:wght@400;500&family=Open+Sans:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--esto es para los logos de facebook, instagram y linkedin-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="#" class="logo-link">
+          <img src="assets/logo.png" alt="AEBEX Logo" class="logo-img" />
+          <span>AEBEX</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li class="dropdown">
+              <a href="about-us.html" class="dropdown-trigger"
+                >Sobre nosotros <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="about-us.html">Quiénes somos</a></li>
+                <li><a href="about-us.html">Equipo y Directiva</a></li>
+                <li><a href="about-us.html">Contacto</a></li>
+                <li><a href="about-us.html">Aliados</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#guide" class="dropdown-trigger"
+                >Guía de estudios <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#guide" onclick="switchGuideTab('usa')"
+                    >Destino: EE. UU.</a
+                  >
+                </li>
+                <li><a href="#scholarships">Directorio de Becas</a></li>
+                <li><a href="#resources">Recursos Descargables</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#community" class="dropdown-trigger"
+                >Comunidad <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#mentors">Programa de mentores</a></li>
+                <li><a href="#projects">Proyectos e investigaciones</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+
+          <a href="#join" class="btn btn-primary btn-nav">Unirse a AEBEX</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Construyendo la red académica boliviana más grande del mundo
+            </h1>
+            <p class="hero-subtitle">“De bolivianos, para bolivianos”</p>
+            <p class="hero-description">
+              Uniendo el talento boliviano en las principales universidades e
+              institutos del mundo.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#scholarships" class="btn btn-primary"
+                >Quiero estudiar en el extranjero</a
+              >
+              <a href="#join" class="btn btn-secondary"
+                >Sumarme a la red AEBEX</a
+              >
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="map-wrapper">
+              <div id="world-map"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROPÓSITO: MISIÓN Y VISIÓN -->
+      <section class="purpose-section" id="about">
+        <div class="container">
+          <div class="purpose-grid">
+            <div class="purpose-card">
+              <h2 class="mono-header">MISIÓN</h2>
+              <div class="card-shape-container">
+                <p>
+                  AEBEX es una comunidad global de estudiantes bolivianos que
+                  construye puentes hacia la educación internacional, el
+                  desarrollo profesional y el impacto en Bolivia.
+                </p>
+              </div>
+            </div>
+
+            <div class="purpose-card">
+              <h2 class="mono-header">VISIÓN</h2>
+              <div class="card-shape-container">
+                <p>
+                  Formar la red de estudiantes bolivianos más activa del mundo y
+                  convertirla en un motor real de oportunidades, mentoría y
+                  acceso para futuras generaciones.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- METRICAS DE IMPACTO -->
+      <section class="metrics-section">
+        <div class="container">
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <span class="metric-number" data-target="1500">+0</span>
+              <span class="metric-label">Miembros activos</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number" data-target="35">+0</span>
+              <span class="metric-label">Países con presencia</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number" data-target="420">+0</span>
+              <span class="metric-label">Becas orientadas</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMUNIDAD BOLIVIANA / HISTORIAS DESTACADAS -->
+      <section class="community-section" id="community">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge-green">HISTORIAS QUE INSPIRAN</span>
+            <h2 class="section-title">Comunidad Boliviana</h2>
+          </div>
+
+          <div class="community-grid">
+            <div class="profile-card">
+              <div class="profile-image">
+                <img
+                  src="assets/alejandrina-jimenez.png"
+                  alt="Alejandrina Jimenes"
+                />
+                <span class="country-tag">Corea del Sur</span>
+              </div>
+              <div class="profile-info">
+                <h3>Alejandrina Jimenez</h3>
+                <span class="study-field"
+                  >Licenciatura - Hanyang University</span
+                >
+                <p>
+                  "AEBEX me dio la orientación clave para estructurar mi SOP
+                  cuando no sabía cómo postular a una beca Fulbright."
+                </p>
+              </div>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-image">
+                <img src="assets/nathaly-rios.png" alt="Nathali Rios" />
+                <span class="country-tag">Estados Unidos</span>
+              </div>
+              <div class="profile-info">
+                <h3>Nathali Rios</h3>
+                <span class="study-field"
+                  >Bachelor. Chemistry - University at Alabama at
+                  Birmingham</span
+                >
+                <p>
+                  "Conectarme con mentores bolivianos en Estados Unidos hizo que
+                  mi proceso de visado e integración fuera mucho más sencillo."
+                </p>
+              </div>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-image">
+                <img src="assets/serafin.png" alt="Serafin Burgulla" />
+                <span class="country-tag">Estados Unidos</span>
+              </div>
+              <div class="profile-info">
+                <h3>Serafin Burgulla</h3>
+                <span class="study-field"
+                  >Bachelor - Economia y Ciencias Politicas - Georgetown
+                  University</span
+                >
+                <p>
+                  "Originario de Cochabamba, su fromación académica refleja un
+                  interés por analizar y comprender los procesos económicos y
+                  políticos que influyen en el desarrollo de nuestras
+                  sociedades."
+                </p>
+              </div>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-image">
+                <img src="assets/nataly-aucachi.png" alt="Nataly Aucachi" />
+                <span class="country-tag">Bolivia</span>
+              </div>
+              <div class="profile-info">
+                <h3>Natali Aucachi</h3>
+                <span class="study-field"
+                  >Robótica & IA - University of Tokyo</span
+                >
+                <p>
+                  "El apoyo de la comunidad es incondicional. Demostramos que el
+                  talento boliviano destaca en cualquier lugar del mundo."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+            
+
+      <!-- DIRECTORIO DE BECAS CON BUSCADOR -->
+      <section class="scholarships-section" id="scholarships">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge-blue">CONVOCATORIAS</span>
+            <h2 class="section-title">Directorio de Becas</h2>
+            <p class="section-subtitle">
+              Encuentra la oportunidad ideal para financiar tus estudios.
+            </p>
+          </div>
+
+          <div class="search-filter-box">
+            <input
+              type="text"
+              id="scholarshipSearch"
+              placeholder="🔍 Buscar becas (ej. Fulbright, Chevening, Alemania, Maestra...)"
+              class="search-input"
+            />
+          </div>
+
+          <div class="scholarships-grid" id="scholarshipsContainer">
+            <!-- Dinámico desde JS o maquetado predeterminado -->
+            <div
+              class="scholarship-card"
+              data-tags="fulbright eeuu posgrado usa maestria"
+            >
+              <div class="card-badge">EE. UU.</div>
+              <h3>Beca Fulbright</h3>
+              <p>
+                Financiamiento completo para Maestrías y Doctorados en
+                universidades de Estados Unidos.
+              </p>
+              <div class="card-footer">
+                <span>Dirigido a: Graduados</span>
+                <button class="btn-link" onclick="openModal('Fulbright')">
+                  Ver detalles →
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="scholarship-card"
+              data-tags="chevening reino unido uk maestria europa"
+            >
+              <div class="card-badge">Reino Unido</div>
+              <h3>Beca Chevening</h3>
+              <p>
+                Programa de becas del gobierno británico para maestrías de 1 año
+                en cualquier universidad del RU.
+              </p>
+              <div class="card-footer">
+                <span>Dirigido a: Líderes y profesionales</span>
+                <button class="btn-link" onclick="openModal('Chevening')">
+                  Ver detalles →
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="scholarship-card"
+              data-tags="daad alemania europe posgrado maestria phd"
+            >
+              <div class="card-badge">Alemania</div>
+              <h3>Beca DAAD</h3>
+              <p>
+                Amplio abanico de becas para posgrados e investigación en
+                instituciones alemanas.
+              </p>
+              <div class="card-footer">
+                <span>Dirigido a: Varias áreas</span>
+                <button class="btn-link" onclick="openModal('DAAD')">
+                  Ver detalles →
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="scholarship-card"
+              data-tags="erasmus europa maestria union europea"
+            >
+              <div class="card-badge">Unión Europea</div>
+              <h3>Erasmus Mundus</h3>
+              <p>
+                Maestrías consorciadas que te permiten estudiar en 2 o más
+                países europeos con beca completa.
+              </p>
+              <div class="card-footer">
+                <span>Dirigido a: Estudiantes globales</span>
+                <button class="btn-link" onclick="openModal('Erasmus Mundus')">
+                  Ver detalles →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AGENDA DE EVENTOS Y BLOG -->
+      <section class="events-blog-section" id="blog">
+        <div class="container">
+          <div class="two-col-layout">
+            <!-- EVENTOS -->
+            <div class="events-col">
+              <h2 class="sub-section-title">Próximos Webinars</h2>
+              <div class="event-list">
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="day">28</span>
+                    <span class="month">AGO</span>
+                  </div>
+                  <div class="event-info">
+                    <h4>Cómo estructurar tu ensayo de motivación</h4>
+                    <p>Taller práctico impartido por ex-becarios Fulbright.</p>
+                    <span class="time">⏰ 19:00 (Hora Bolivia) - Vía Zoom</span>
+                  </div>
+                </div>
+
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="day">05</span>
+                    <span class="month">SEP</span>
+                  </div>
+                  <div class="event-info">
+                    <h4>Oportunidades de posgrado en Alemania con DAAD</h4>
+                    <p>Charla informativa sobre requisitos y fechas clave.</p>
+                    <span class="time"
+                      >⏰ 18:30 (Hora Bolivia) - Vía Google Meet</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BLOG -->
+            <div class="blog-col">
+              <h2 class="sub-section-title"> Últimas publicaciones</h2>
+              <div class="blog-list">
+                <article class="blog-card">
+                  <span class="blog-category">Guía práctica</span>
+                  <h4>
+                    5 errores comunes al traducir tus documentos académicos
+                  </h4>
+                  <p class="blog-excerpt">
+                    Evita observaciones en tu postulación cuidando los sellos de
+                    traducción jurada y visados.
+                  </p>
+                </article>
+
+                <article class="blog-card">
+                  <span class="blog-category">Experiencias</span>
+                  <h4>
+                    Mi primer semestre en Tokio: De La Paz al archipiélago nipón
+                  </h4>
+                  <p class="blog-excerpt">
+                    Carlos Quispe nos relata su choque cultural y los retos
+                    superados en el laboratorio de robótica.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- UNIRSE Y CONTACTO -->
+      <section class="join-section" id="join">
+        <div class="container">
+          <div class="glass-card-cta">
+            <h2>
+              ¿Eres estudiante boliviano en el exterior o buscas salir a
+              estudiar?
+            </h2>
+            <p>
+              Súmate a la comunidad académica más dinámica. Forma parte de
+              mentorías, redes de investigación y eventos comunitarios.
+            </p>
+            <div class="cta-form-wrapper">
+              <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-row">
+                  <input
+                    type="text"
+                    placeholder="Tu Nombre completo"
+                    required
+                    class="form-input"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Tu Correo electrónico"
+                    required
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-row">
+                  <select required class="form-input">
+                    <option value="" disabled selected>Tu perfil actual</option>
+                    <option value="postulante">
+                      Quiero postular a una beca
+                    </option>
+                    <option value="estudiante">
+                      Soy estudiante en el extranjero
+                    </option>
+                    <option value="egresado">
+                      Soy profesional/graduado en el exterior
+                    </option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">
+                  Unirme a la Red AEBEX
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="logo">AEBEX</a>
+            <p>
+              Asociación de Estudiantes Bolivianos en el Extranjero
+            </p>
+            <p class="copyright">
+              © 2026 AEBEX. Todos los derechos reservados.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="#about">Sobre Nosotros</a></li>
+              <li><a href="#guide">Guía de Estudios</a></li>
+              <li><a href="#community">Comunidad</a></li>
+              <li><a href="#scholarships">Directorio de Becas</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <h4>Redes Sociales</h4>
+              <div class="social-links">
+              <a href="https://www.linkedin.com/company/aebex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+    
+              <a href="https://www.instagram.com/aebex.bo?fbclid=IwY2xjawT4FDhwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMWRmVjB1WVhLblVONE5TaWVzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEecO5hH4qMv9f-wYRICG1TQyoq3o-Iec5cQVyUMCGh1n2n647mAy46eArLuLk_aem_Qwu4z-uOAVK5Y1JRj36t3g" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+  
+              <a href="https://www.facebook.com/aebex.bo" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            </div>
+            <p class="support-email">
+              Contacto: <span>aebex.bolivia@gmail.com</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL GENERICO PARA DETALLES / DESCARGAS -->
+    <div class="modal-backdrop" id="customModal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <h3 id="modalTitle">Título del Modal</h3>
+        <div id="modalBody" class="modal-body-content">
+          <p>Cargando información detallada...</p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" onclick="closeModal()">
+            Entendido
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cerca del final del <body> -->
+    <!-- 1. Primero las librerías del mapa -->
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+
+    <!-- 2. Al final, tu archivo JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

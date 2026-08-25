@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - AEBEX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&family=Lexend+Deca:wght@400;500&family=Open+Sans:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--esto es para los logos de facebook, instagram y linkedin-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css"
+    />
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    
+     <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="assets/logo.png" alt="AEBEX Logo" class="logo-img" />
+          <span>AEBEX</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li class="dropdown">
+              <a href="about-us.html" class="dropdown-trigger"
+                >Sobre nosotros <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="about-us.html">Quiénes somos</a></li>
+                <li><a href="about-us.html">Equipo y Directiva</a></li>
+                <li><a href="about-us.html">Contacto</a></li>
+                <li><a href="about-us.html">Aliados</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#guide" class="dropdown-trigger"
+                >Guía de estudios <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#guide" onclick="switchGuideTab('usa')"
+                    >Destino: EE. UU.</a
+                  >
+                </li>
+                <li><a href="#scholarships">Directorio de Becas</a></li>
+                <li><a href="#resources">Recursos Descargables</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#community" class="dropdown-trigger"
+                >Comunidad <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#mentors">Programa de mentores</a></li>
+                <li><a href="#projects">Proyectos e investigaciones</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+
+          <a href="#join" class="btn btn-primary btn-nav">Unirse a AEBEX</a>
+        </nav>
+      </div>
+    </header>
+
+    <main style="padding-top: calc(var(--header-height) + 40px);">
+
+        <!-- SECCIÓN: QUIÉNES SOMOS -->
+        <section id="quienes-somos" class="purpose-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="badge-blue">Nuestra Esencia</span>
+                    <h2 class="section-title">Quiénes Somos</h2>
+                    <p style="color: var(--color-text-subtle); max-width: 600px; margin: 0 auto;">
+                        AEBEX es una comunidad global de estudiantes bolivianos que construye puentes hacia la educación internacional de alto nivel.
+                    </p>
+                </div>
+              
+        <div class="container">
+          <div class="purpose-grid">
+            <div class="purpose-card">
+              <h2 class="mono-header">MISIÓN</h2>
+              <div class="card-shape-container">
+                <p>
+                  AEBEX es una comunidad global de estudiantes bolivianos que
+                  construye puentes hacia la educación internacional, el
+                  desarrollo profesional y el impacto en Bolivia.
+                </p>
+              </div>
+            </div>
+
+            <div class="purpose-card">
+              <h2 class="mono-header">VISIÓN</h2>
+              <div class="card-shape-container">
+                <p>
+                  Formar la red de estudiantes bolivianos más activa del mundo y
+                  convertirla en un motor real de oportunidades, mentoría y
+                  acceso para futuras generaciones.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+     
+            </div>
+        </section>
+
+        <!-- SECCIÓN: JUNTA DIRECTIVA -->
+       
+        <section id="directiva" class="community-section">
+           
+
+        <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="section-header">
+
+            <div class="eyebrow">
+                <span class="eyebrow-line"></span>
+                Liderazgo
+                <span class="eyebrow-line"></span>
+            </div>
+
+            <h2>
+                Junta <span>Directiva</span>
+            </h2>
+
+            <p>
+                Conoce al equipo que impulsa la visión,
+                el crecimiento y el impacto de AEBEX.
+            </p>
+
+        </header>
+
+
+        <!-- CAROUSEL -->
+        <div class="team-carousel">
+
+            <button
+                class="nav-button nav-prev"
+                id="prevBtn"
+                aria-label="Miembro anterior"
+            >
+                <span>‹</span>
+            </button>
+
+
+            <div class="carousel-window">
+
+                <div
+                    class="team-track"
+                    id="teamTrack"
+                >
+
+
+                    <!-- PERSONA 1 -->
+
+                    <article class="member-card">
+
+                        <div class="member-image">
+
+                            <img
+                                src="assets/directiva/serafin-director.png"
+                                alt="Serafin Burgulla"
+                            >
+
+                            <div class="image-overlay"></div>
+                           
+                        </div>
+
+
+                        <div class="member-info">
+
+                            <h3>
+                                Serafin Burgulla
+                            </h3>
+
+                            <p class="member-role">
+                                Director Ejecutivo
+                            </p>
+
+                            <p class="member-summary">
+                                Dirección estratégica, liderazgo institucional
+                                y visión de crecimiento.
+                            </p>
+
+                            <button
+                                class="profile-button"
+                                data-member="0"
+                            >
+                                Ver perfil
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PERSONA 2 -->
+
+                    <article class="member-card">
+
+                        <div class="member-image">
+
+                            <img
+                                src="assets/directiva/lorena-santos-secretaria.png"
+                                alt="Lorena Santos"
+                            >
+
+                            <div class="image-overlay"></div>
+
+
+                        </div>
+
+
+                        <div class="member-info">
+
+                            <h3>
+                                Lorena Santos
+                            </h3>
+
+                            <p class="member-role">
+                                Secretaria General
+                            </p>
+
+                            <p class="member-summary">
+                                Formación, programas académicos
+                                y desarrollo de oportunidades.
+                            </p>
+
+                            <button
+                                class="profile-button"
+                                data-member="1"
+                            >
+                                Ver perfil
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PERSONA 3 -->
+
+                    <article class="member-card">
+
+                        <div class="member-image">
+
+                            <img
+                                src="assets/directiva/rebeca-ricard-operaciones.png"
+                                alt="Lucía Mamani"
+                            >
+
+                            <div class="image-overlay"></div>
+                        </div>
+
+
+                        <div class="member-info">
+
+                            <h3>
+                                Rebeca Ricard
+                            </h3>
+
+                            <p class="member-role">
+                                Directora de Operaciones
+                            </p>
+
+                            <p class="member-summary">
+                                Relaciones institucionales,
+                                alianzas y expansión del impacto.
+                            </p>
+
+                            <button
+                                class="profile-button"
+                                data-member="2"
+                            >
+                                Ver perfil
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PERSONA 4 -->
+
+                    <article class="member-card">
+
+                        <div class="member-image">
+
+                            <img
+                                src="assets/directiva/daniela-loayza-rrhh.png"
+                                alt="Daniela Loayza"
+                            >
+
+                            <div class="image-overlay"></div>
+
+                        </div>
+
+
+                        <div class="member-info">
+
+                            <h3>
+                                Daniela Loayza
+                            </h3>
+
+                            <p class="member-role">
+                                Directora Legal
+                            </p>
+
+                            <p class="member-summary">
+                                RR&HH
+                            </p>
+
+                            <button
+                                class="profile-button"
+                                data-member="3"
+                            >
+                                Ver perfil
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <!-- PERSONA 5 -->
+
+                    <article class="member-card">
+
+                        <div class="member-image">
+
+                            <img
+                                src="assets/directiva/nataly-aucachi-tecno.png"
+                                alt="Natali Aucachi"
+                            >
+
+                            <div class="image-overlay"></div>
+
+                        </div>
+
+
+                        <div class="member-info">
+
+                            <h3>
+                                Natali Aucachi
+                            </h3>
+
+                            <p class="member-role">
+                                Directora de Tecnologia
+                            </p>
+
+                            <p class="member-summary">
+                                Tecnologia, Innovación
+                            </p>
+
+                            <button
+                                class="profile-button"
+                                data-member="4"
+                            >
+                                Ver perfil
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- ARROWS -->
+
+            <button
+                class="nav-button nav-next"
+                id="nextBtn"
+                aria-label="Siguiente miembro"
+            >
+                <span>›</span>
+            </button>
+
+        </div>
+
+
+        <!-- DOTS -->
+
+        <div class="carousel-footer">
+
+            <div
+                class="carousel-dots"
+                id="carouselDots"
+            ></div>
+
+            <div class="carousel-counter">
+
+                <span id="currentNumber">
+                    01
+                </span>
+
+                <i></i>
+
+                <span id="totalNumber">
+                    02
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MODAL -->
+
+<div
+    class="modal"
+    id="profileModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal-backdrop"
+        data-close-modal
+    ></div>
+
+
+    <div
+        class="modal-dialog"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <button
+            class="modal-close"
+            id="modalClose"
+            aria-label="Cerrar perfil"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-photo">
+
+            <img
+                id="modalImage"
+                src=""
+                alt=""
+            >
+
+        </div>
+
+
+        <div class="modal-content">
+
+            <span class="modal-label">
+                Junta Directiva · AEBEX
+            </span>
+
+            <h2 id="modalName"></h2>
+
+            <p
+                class="modal-role"
+                id="modalRole"
+            ></p>
+
+            <p
+                id="modalDescription"
+            ></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- SECCIÓN: CARRUSEL AUTOMÁTICO DE UNIVERSIDADES Y ALIANZAS -->
+        <section id="aliados" class="guide-section" style="padding: 60px 0; overflow: hidden;">
+            <div class="container center">
+                <span class="badge-blue">Red Global y Alianzas</span>
+                <h2 class="section-title" style="margin-bottom: 30px;">Universidades y Aliados</h2>
+                
+                <div class="infinite-carousel">
+                    <div class="carousel-track" id="infiniteTrack">
+                        <!-- Inyectado por JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="contacto" class="join-section">
+            <div class="glass-card-cta">
+                <h2>¿Tienes alguna duda o propuesta?</h2>
+                <p>Ponte en contacto con la directiva oficial de AEBEX.</p>
+                <a href="mailto:contacto@aebex.org" class="btn btn-primary">Escríbenos un Correo</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span style="font-weight: 700; font-size: 1.2rem; color: #fff;">AEBEX</span>
+                <p>Conectando el talento boliviano con el mundo.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+            <h4>Redes Sociales</h4>
+              <div class="social-links">
+              <a href="https://www.linkedin.com/company/aebex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+    
+              <a href="https://www.instagram.com/aebex.bo?fbclid=IwY2xjawT4FDhwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMWRmVjB1WVhLblVONE5TaWVzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEecO5hH4qMv9f-wYRICG1TQyoq3o-Iec5cQVyUMCGh1n2n647mAy46eArLuLk_aem_Qwu4z-uOAVK5Y1JRj36t3g" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+  
+              <a href="https://www.facebook.com/aebex.bo" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            </div>
+            <p class="support-email">
+              Contacto: <span>aebex.bolivia@gmail.com</span>
+            </p>
+          </div>
+            </div>
+        </div>
+        <div class="container copyright" style="text-align: center; color: var(--color-text-muted);">
+            &copy; 2026 AEBEX. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE JAVASCRIPT -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
+</html>
