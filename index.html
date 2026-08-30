@@ -4,17 +4,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AEBEX - Red Académica Boliviana en el Exterior</title>
+    <title>AEBEX - Asociación de Estudiantes Bolivianos Estudiando en el Extranjerp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&family=Lexend+Deca:wght@400;500&family=Open+Sans:wght@700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
     <!--esto es para los logos de facebook, instagram y linkedin-->
@@ -29,6 +23,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="tricolor-bar" aria-hidden="true"></div>
     <header class="header">
       <div class="nav-container">
         <a href="#" class="logo-link">
@@ -49,10 +44,12 @@
                 >Sobre nosotros <span class="arrow">▾</span></a
               >
               <ul class="dropdown-menu">
-                <li><a href="about-us.html">Quiénes somos</a></li>
-                <li><a href="about-us.html">Equipo y Directiva</a></li>
-                <li><a href="about-us.html">Contacto</a></li>
-                <li><a href="about-us.html">Aliados</a></li>
+                <li><a href="about-us.html#quienes-somos">Quiénes somos</a></li>
+                <li><a href="about-us.html#directiva">Equipo y Directiva</a></li>
+                <li><a href="about-us.html#comunidad">Comunidad Boliviana</a></li>
+                <li><a href="about-us.html#pasantes">Equipo de Pasantes</a></li>
+                <li><a href="about-us.html#contacto">Contacto</a></li>
+                <li><a href="about-us.html#aliados">Aliados</a></li>
               </ul>
             </li>
 
@@ -67,7 +64,11 @@
                   >
                 </li>
                 <li><a href="#scholarships">Directorio de Becas</a></li>
-                <li><a href="#resources">Recursos Descargables</a></li>
+                <li>
+                  <a href="#guide" onclick="switchGuideTab('resources')"
+                    >Recursos Descargables</a
+                  >
+                </li>
               </ul>
             </li>
 
@@ -94,6 +95,10 @@
       <section class="hero-section">
         <div class="hero-grid">
           <div class="hero-content">
+            <span class="origin-badge">
+              <span class="flag-dot" aria-hidden="true"></span>
+              Nacida en Bolivia
+            </span>
             <h1 class="hero-title">
               Construyendo la red académica boliviana más grande del mundo
             </h1>
@@ -117,6 +122,7 @@
             <div class="map-wrapper">
               <div id="world-map"></div>
             </div>
+            <p class="map-caption">Bolivia — el punto de partida de cada historia</p>
           </div>
         </div>
       </section>
@@ -155,7 +161,7 @@
         <div class="container">
           <div class="metrics-grid">
             <div class="metric-item">
-              <span class="metric-number" data-target="1500">+0</span>
+              <span class="metric-number" data-target="50">+0</span>
               <span class="metric-label">Miembros activos</span>
             </div>
             <div class="metric-item">
@@ -163,8 +169,126 @@
               <span class="metric-label">Países con presencia</span>
             </div>
             <div class="metric-item">
-              <span class="metric-number" data-target="420">+0</span>
+              <span class="metric-number" data-target="42">+0</span>
               <span class="metric-label">Becas orientadas</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GUÍA DE ESTUDIOS -->
+      <section class="guide-section" id="guide">
+        <div class="container">
+          <div class="section-header center">
+            <span class="badge-blue">Paso a paso</span>
+            <h2 class="section-title">Guía de Estudios</h2>
+            <p class="section-subtitle">
+              Todo lo que necesitas para postular a una universidad o beca en el
+              exterior, ordenado por destino.
+            </p>
+          </div>
+
+          <div class="tabs-wrapper">
+            <div class="tabs-header">
+              <button class="tab-btn active" onclick="openTab(event, 'usa')">
+                Destino: EE. UU.
+              </button>
+              <button class="tab-btn" onclick="openTab(event, 'europa')">
+                Destino: Europa
+              </button>
+              <button class="tab-btn" onclick="openTab(event, 'resources')">
+                Recursos Descargables
+              </button>
+            </div>
+
+            <div class="tab-content active" id="usa">
+              <div class="tab-panel-grid">
+                <div class="panel-card">
+                  <h3>Antes de postular</h3>
+                  <ul>
+                    <li>Define 2-3 programas afines a tu perfil académico.</li>
+                    <li>Revisa los exámenes requeridos: TOEFL/IELTS y GRE/GMAT.</li>
+                    <li>Calcula el presupuesto real, incluyendo visado y seguro.</li>
+                  </ul>
+                </div>
+                <div class="panel-card">
+                  <h3>Documentos clave</h3>
+                  <ul>
+                    <li>Statement of Purpose (SOP) revisado por un mentor.</li>
+                    <li>Cartas de recomendación académica o laboral.</li>
+                    <li>Traducción jurada de notas y títulos.</li>
+                  </ul>
+                </div>
+                <div class="panel-card">
+                  <h3>Visado F-1</h3>
+                  <ul>
+                    <li>Formulario I-20 emitido por la universidad.</li>
+                    <li>Pago de la tasa SEVIS antes de la entrevista.</li>
+                    <li>Entrevista consular: prepárala con la comunidad AEBEX.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="europa">
+              <div class="tab-panel-grid">
+                <div class="panel-card">
+                  <h3>Rutas frecuentes</h3>
+                  <ul>
+                    <li>Maestrías Erasmus Mundus con beca completa.</li>
+                    <li>Posgrados DAAD en Alemania sin costo de matrícula.</li>
+                    <li>Programas Chevening en el Reino Unido.</li>
+                  </ul>
+                </div>
+                <div class="panel-card">
+                  <h3>Idioma y requisitos</h3>
+                  <ul>
+                    <li>IELTS o certificación equivalente según el país.</li>
+                    <li>Convalidación de títulos ante el país destino.</li>
+                    <li>Seguro médico obligatorio para el visado Schengen.</li>
+                  </ul>
+                </div>
+                <div class="panel-card">
+                  <h3>Costo de vida</h3>
+                  <ul>
+                    <li>Varía mucho entre Europa occidental y oriental.</li>
+                    <li>Muchas becas incluyen estipendio mensual.</li>
+                    <li>Consulta a mentores AEBEX en cada país.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="resources">
+              <div class="tab-panel-grid">
+                <div class="panel-card">
+                  <h3>Plantilla de Statement of Purpose</h3>
+                  <p style="color: var(--color-text-subtle); font-size: 0.9rem; margin-bottom: 14px;">
+                    Estructura editable usada por becarios Fulbright y Chevening.
+                  </p>
+                  <button class="btn-link" onclick="openResourceModal('Plantilla SOP')">
+                    Descargar →
+                  </button>
+                </div>
+                <div class="panel-card">
+                  <h3>Checklist de postulación</h3>
+                  <p style="color: var(--color-text-subtle); font-size: 0.9rem; margin-bottom: 14px;">
+                    Lista de documentos y fechas clave para no olvidar nada.
+                  </p>
+                  <button class="btn-link" onclick="openResourceModal('Checklist de postulación')">
+                    Descargar →
+                  </button>
+                </div>
+                <div class="panel-card">
+                  <h3>Guía de cartas de recomendación</h3>
+                  <p style="color: var(--color-text-subtle); font-size: 0.9rem; margin-bottom: 14px;">
+                    Cómo pedirlas y qué debe incluir cada carta.
+                  </p>
+                  <button class="btn-link" onclick="openResourceModal('Guía de cartas de recomendación')">
+                    Descargar →
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -178,89 +302,74 @@
             <h2 class="section-title">Comunidad Boliviana</h2>
           </div>
 
-          <div class="community-grid">
-            <div class="profile-card">
-              <div class="profile-image">
-                <img
-                  src="assets/miembros/abigail-osinaga.jpg"
-                  alt="Abigail Osinaga"
-                />
-                <span class="country-tag">Estados Unidos</span>
-              </div>
-              <div class="profile-info">
-                <h3>Abigail Osinaga</h3>
-                <span class="study-field"
-                  >Licenciatura - Florida International Universiry</span
-                >
-                <p>
-                  "Me encanta la idea de ser una Red de Bolivianos en pro brindar más oportunidades a toda la comunidad boliviana sin barreras socioculturales o económicas."
-                </p>
+          <div class="community-carousel">
+            <button
+              class="nav-button nav-prev"
+              id="communityPrevBtn"
+              aria-label="Anterior"
+            >
+              <span>‹</span>
+            </button>
+
+            <div class="carousel-window">
+              <div class="team-track" id="communityTrack">
+                <!-- Se genera dinámicamente desde AEBEX_DATA.comunidadBoliviana en script.js -->
               </div>
             </div>
 
-            <div class="profile-card">
-              <div class="profile-image">
-                <img src="assets/miembros/adriana-veizaga.jpeg" alt="Adriana Veizaga" />
-                <span class="country-tag">Estados Unidos</span>
-              </div>
-              <div class="profile-info">
-                <h3>Adriana Veizaga</h3>
-                <span class="study-field"
-                  >Advertising and Public Relations Minor: Graphic Design - Lynn University</span
-                >
+            <button
+              class="nav-button nav-next"
+              id="communityNextBtn"
+              aria-label="Siguiente"
+            >
+              <span>›</span>
+            </button>
+          </div>
+
+          <div class="carousel-footer">
+            <div class="carousel-dots" id="communityDots"></div>
+            <div class="carousel-counter">
+              <span id="communityCurrent">01</span>
+              <i></i>
+              <span id="communityTotal">02</span>
+            </div>
+          </div>
+
+          <div class="community-cta">
+            <a href="about-us.html#comunidad" class="btn btn-outline">
+              Ver más historias de la comunidad →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRAMA DE MENTORES -->
+      <section class="purpose-section" id="mentors">
+        <div class="container">
+          <div class="section-header center">
+            <span class="badge-green">Acompañamiento</span>
+            <h2 class="section-title">Programa de Mentores</h2>
+            <p class="section-subtitle">
+              Bolivianos que ya cursaron el camino te guían en tu propia postulación.
+            </p>
+          </div>
+          <div class="purpose-grid">
+            <div class="purpose-card">
+              <h2 class="mono-header">¿CÓMO FUNCIONA?</h2>
+              <div class="card-shape-container">
                 <p>
-                  
+                  Te conectamos con un mentor de tu área de estudio y país de
+                  destino para revisar tu perfil y prepararte
+                  para entrevistas.
                 </p>
               </div>
             </div>
-
-            <div class="profile-card">
-              <div class="profile-image">
-                <img src="assets/miembros/alejandrina-jimenez.jpeg" alt="Alejandrina Jimenez" />
-                <span class="country-tag">Corea del Sur</span>
-              </div>
-              <div class="profile-info">
-                <h3>Alejandrina Jimenez</h3>
-                <span class="study-field"
-                  >Bachelor of Science in Electronic Engineering - Hanyang University 
-                   MS in Computer Science
-                   MS in Statistics (in progress)
-                </span
-                >
+            <div class="purpose-card">
+              <h2 class="mono-header">¿QUIÉN PUEDE PARTICIPAR?</h2>
+              <div class="card-shape-container">
                 <p>
-                 
-                </p>
-              </div>
-            </div>
-
-            <div class="profile-card">
-              <div class="profile-image">
-                <img src="assets/miembros/aleska-medrano.jpeg" alt="Aleska Medrano" />
-                <span class="country-tag">Estados Unidos</span>
-              </div>
-              <div class="profile-info">
-                <h3>Aleska Medrano</h3>
-                <span class="study-field"
-                  >Financial Economics - Columbia University</span
-                >
-                <p>
-                  
-                </p>
-              </div>
-            </div>
-
-            <div class="profile-card">
-              <div class="profile-image">
-                <img src="assets/miembros/ana-valdez-saravia.jpg" alt="Ana Valdez Saravia" />
-                <span class="country-tag">Estados Unidos</span>
-              </div>
-              <div class="profile-info">
-                <h3>Ana Valdez Saravia</h3>
-                <span class="study-field"
-                  >M.S.Bilingual journalism - Craig Newmark Graduate School of Journalism at CUNY </span
-                >
-                <p>
-                  
+                  Cualquier estudiante boliviano, dentro o fuera del país, que
+                  esté postulando o planeando postular a estudios en el exterior.
                 </p>
               </div>
             </div>
@@ -268,8 +377,42 @@
         </div>
       </section>
 
-
-            
+      <!-- PROYECTOS E INVESTIGACIONES -->
+      <section class="guide-section" id="projects">
+        <div class="container">
+          <div class="section-header center">
+            <span class="badge-blue">Iniciativas AEBEX</span>
+            <h2 class="section-title">Proyectos e Investigaciones</h2>
+            <p class="section-subtitle">
+              Espacios donde miembros de la red colaboran en investigación y
+              proyectos con impacto en Bolivia.
+            </p>
+          </div>
+          <div class="tab-panel-grid">
+            <div class="panel-card">
+              <h3>Red de investigación STEM</h3>
+              <p style="color: var(--color-text-subtle); font-size: 0.9rem;">
+                Grupo de estudiantes de ciencias e ingeniería que colabora en
+                papers y proyectos conjuntos entre universidades aliadas.
+              </p>
+            </div>
+            <div class="panel-card">
+              <h3>Bolivia Talks</h3>
+              <p style="color: var(--color-text-subtle); font-size: 0.9rem;">
+                Ciclo de charlas donde miembros de AEBEX presentan su
+                investigación a la comunidad y a estudiantes en Bolivia.
+              </p>
+            </div>
+            <div class="panel-card">
+              <h3>Retorno de impacto</h3>
+              <p style="color: var(--color-text-subtle); font-size: 0.9rem;">
+                Proyectos que buscan aplicar el conocimiento adquirido en el
+                exterior a problemas concretos en Bolivia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- DIRECTORIO DE BECAS CON BUSCADOR -->
       <section class="scholarships-section" id="scholarships">
@@ -286,7 +429,7 @@
             <input
               type="text"
               id="scholarshipSearch"
-              placeholder="🔍 Buscar becas (ej. Fulbright, Chevening, Alemania, Maestra...)"
+              placeholder="Buscar becas (ej. Fulbright, Chevening, Alemania, Maestria...)"
               class="search-input"
             />
           </div>
@@ -305,7 +448,7 @@
               </p>
               <div class="card-footer">
                 <span>Dirigido a: Graduados</span>
-                <button class="btn-link" onclick="openModal('Fulbright')">
+                <button class="btn-link" onclick="openInfoModal('Fulbright')">
                   Ver detalles →
                 </button>
               </div>
@@ -323,7 +466,7 @@
               </p>
               <div class="card-footer">
                 <span>Dirigido a: Líderes y profesionales</span>
-                <button class="btn-link" onclick="openModal('Chevening')">
+                <button class="btn-link" onclick="openInfoModal('Chevening')">
                   Ver detalles →
                 </button>
               </div>
@@ -341,7 +484,7 @@
               </p>
               <div class="card-footer">
                 <span>Dirigido a: Varias áreas</span>
-                <button class="btn-link" onclick="openModal('DAAD')">
+                <button class="btn-link" onclick="openInfoModal('DAAD')">
                   Ver detalles →
                 </button>
               </div>
@@ -351,7 +494,7 @@
               class="scholarship-card"
               data-tags="erasmus europa maestria union europea"
             >
-              <div class="card-badge">Unión Europea</div>
+              <div class="card-badge">UE</div>
               <h3>Erasmus Mundus</h3>
               <p>
                 Maestrías consorciadas que te permiten estudiar en 2 o más
@@ -359,7 +502,7 @@
               </p>
               <div class="card-footer">
                 <span>Dirigido a: Estudiantes globales</span>
-                <button class="btn-link" onclick="openModal('Erasmus Mundus')">
+                <button class="btn-link" onclick="openInfoModal('Erasmus Mundus')">
                   Ver detalles →
                 </button>
               </div>
@@ -378,12 +521,14 @@
               <div class="event-list">
                 <div class="event-card">
                   <div class="event-date">
-                    <span class="day">28</span>
+                    <span class="day">30</span>
                     <span class="month">AGO</span>
                   </div>
                   <div class="event-info">
-                    <h4>Cómo estructurar tu ensayo de motivación</h4>
-                    <p>Taller práctico impartido por ex-becarios Fulbright.</p>
+                    <h4>Cómo balancear el colegio y una beca al polo norte</h4>
+                    <p>Valeria  Gutierrez </p>
+                    <p>-Campeona Olímpica(Informática) </p>
+                    <p>-Primera boliviana en el Polo Norte </p>
                     <span class="time">⏰ 19:00 (Hora Bolivia) - Vía Zoom</span>
                   </div>
                 </div>
@@ -422,11 +567,11 @@
                 <article class="blog-card">
                   <span class="blog-category">Experiencias</span>
                   <h4>
-                    Mi primer semestre en Tokio: De La Paz al archipiélago nipón
+                    Mi primer semestre en Turquia: De Cochabamba al país que cruza Europa y Asia.
                   </h4>
                   <p class="blog-excerpt">
-                    Carlos Quispe nos relata su choque cultural y los retos
-                    superados en el laboratorio de robótica.
+                    Serafin Burgulla nos relata su choque cultural y los retos
+                    superados en la industria Americana.
                   </p>
                 </article>
               </div>
@@ -445,7 +590,7 @@
             </h2>
             <p>
               Súmate a la comunidad académica más dinámica. Forma parte de
-              mentorías, redes de investigación y eventos comunitarios.
+              mentorías, redes de investigación y eventos informativos.
             </p>
             <div class="cta-form-wrapper">
               <form id="contactForm" onsubmit="handleFormSubmit(event)">
@@ -480,6 +625,7 @@
                 <button type="submit" class="btn btn-primary full-width">
                   Unirme a la Red AEBEX
                 </button>
+                <p class="form-note" role="status"></p>
               </form>
             </div>
           </div>
@@ -538,13 +684,13 @@
     <!-- MODAL GENERICO PARA DETALLES / DESCARGAS -->
     <div class="modal-backdrop" id="customModal">
       <div class="modal-box">
-        <button class="modal-close" onclick="closeModal()">✕</button>
+        <button class="modal-close" onclick="closeInfoModal()">✕</button>
         <h3 id="modalTitle">Título del Modal</h3>
         <div id="modalBody" class="modal-body-content">
           <p>Cargando información detallada...</p>
         </div>
         <div class="modal-actions">
-          <button class="btn btn-primary" onclick="closeModal()">
+          <button class="btn btn-primary" onclick="closeInfoModal()">
             Entendido
           </button>
         </div>
@@ -557,6 +703,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
 
     <!-- 2. Al final, tu archivo JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

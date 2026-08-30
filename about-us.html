@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - AEBEX</title>
     <link rel="stylesheet" href="styles.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&family=Lexend+Deca:wght@400;500&family=Open+Sans:wght@700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
     <!--esto es para los logos de facebook, instagram y linkedin-->
@@ -26,6 +22,7 @@
     />
 </head>
 <body>
+    <div class="tricolor-bar" aria-hidden="true"></div>
 
     <!-- HEADER / NAVEGACIÓN -->
     
@@ -49,39 +46,37 @@
                 >Sobre nosotros <span class="arrow">▾</span></a
               >
               <ul class="dropdown-menu">
-                <li><a href="about-us.html">Quiénes somos</a></li>
-                <li><a href="about-us.html">Equipo y Directiva</a></li>
-                <li><a href="about-us.html">Contacto</a></li>
-                <li><a href="about-us.html">Aliados</a></li>
+                <li><a href="#quienes-somos">Quiénes somos</a></li>
+                <li><a href="#directiva">Equipo y Directiva</a></li>
+                <li><a href="#comunidad">Comunidad Boliviana</a></li>
+                <li><a href="#pasantes">Equipo de Pasantes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#aliados">Aliados</a></li>
               </ul>
             </li>
 
             <li class="dropdown">
-              <a href="#guide" class="dropdown-trigger"
+              <a href="index.html#guide" class="dropdown-trigger"
                 >Guía de estudios <span class="arrow">▾</span></a
               >
               <ul class="dropdown-menu">
-                <li>
-                  <a href="#guide" onclick="switchGuideTab('usa')"
-                    >Destino: EE. UU.</a
-                  >
-                </li>
-                <li><a href="#scholarships">Directorio de Becas</a></li>
-                <li><a href="#resources">Recursos Descargables</a></li>
+                <li><a href="index.html#usa">Destino: EE. UU.</a></li>
+                <li><a href="index.html#scholarships">Directorio de Becas</a></li>
+                <li><a href="index.html#resources">Recursos Descargables</a></li>
               </ul>
             </li>
 
             <li class="dropdown">
-              <a href="#community" class="dropdown-trigger"
+              <a href="index.html#community" class="dropdown-trigger"
                 >Comunidad <span class="arrow">▾</span></a
               >
               <ul class="dropdown-menu">
-                <li><a href="#mentors">Programa de mentores</a></li>
-                <li><a href="#projects">Proyectos e investigaciones</a></li>
+                <li><a href="index.html#mentors">Programa de mentores</a></li>
+                <li><a href="index.html#projects">Proyectos e investigaciones</a></li>
               </ul>
             </li>
 
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
           </ul>
 
           <a href="#join" class="btn btn-primary btn-nav">Unirse a AEBEX</a>
@@ -133,7 +128,7 @@
 
         <!-- SECCIÓN: JUNTA DIRECTIVA -->
        
-        <section id="directiva" class="community-section">
+        <section id="directiva" class="leadership-section">
            
 
         <div class="ambient ambient-one"></div>
@@ -142,11 +137,11 @@
     <div class="container">
 
         <!-- HEADER -->
-        <header class="section-header">
+        <header class="directiva-header">
 
             <div class="eyebrow">
                 <span class="eyebrow-line"></span>
-                Liderazgo
+                01 — Liderazgo
                 <span class="eyebrow-line"></span>
             </div>
 
@@ -180,226 +175,8 @@
                     class="team-track"
                     id="teamTrack"
                 >
+                    <!-- Las tarjetas se generan dinámicamente desde AEBEX_DATA.juntaDirectiva en script.js -->
 
-
-                    <!-- PERSONA 1 -->
-
-                    <article class="member-card">
-
-                        <div class="member-image">
-
-                            <img
-                                src="assets/directiva/serafin-director.png"
-                                alt="Serafin Burgulla"
-                            >
-
-                            <div class="image-overlay"></div>
-                           
-                        </div>
-
-
-                        <div class="member-info">
-
-                            <h3>
-                                Serafin Burgulla
-                            </h3>
-
-                            <p class="member-role">
-                                Director Ejecutivo
-                            </p>
-
-                            <p class="member-summary">
-                                Dirección estratégica, liderazgo institucional
-                                y visión de crecimiento.
-                            </p>
-
-                            <button
-                                class="profile-button"
-                                data-member="0"
-                            >
-                                Ver perfil
-                                <span>→</span>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PERSONA 2 -->
-
-                    <article class="member-card">
-
-                        <div class="member-image">
-
-                            <img
-                                src="assets/directiva/lorena-santos-secretaria.png"
-                                alt="Lorena Santos"
-                            >
-
-                            <div class="image-overlay"></div>
-
-
-                        </div>
-
-
-                        <div class="member-info">
-
-                            <h3>
-                                Lorena Santos
-                            </h3>
-
-                            <p class="member-role">
-                                Secretaria General
-                            </p>
-
-                            <p class="member-summary">
-                                Formación, programas académicos
-                                y desarrollo de oportunidades.
-                            </p>
-
-                            <button
-                                class="profile-button"
-                                data-member="1"
-                            >
-                                Ver perfil
-                                <span>→</span>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PERSONA 3 -->
-
-                    <article class="member-card">
-
-                        <div class="member-image">
-
-                            <img
-                                src="assets/directiva/rebeca-ricard-operaciones.png"
-                                alt="Lucía Mamani"
-                            >
-
-                            <div class="image-overlay"></div>
-                        </div>
-
-
-                        <div class="member-info">
-
-                            <h3>
-                                Rebeca Ricard
-                            </h3>
-
-                            <p class="member-role">
-                                Directora de Operaciones
-                            </p>
-
-                            <p class="member-summary">
-                                Relaciones institucionales,
-                                alianzas y expansión del impacto.
-                            </p>
-
-                            <button
-                                class="profile-button"
-                                data-member="2"
-                            >
-                                Ver perfil
-                                <span>→</span>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PERSONA 4 -->
-
-                    <article class="member-card">
-
-                        <div class="member-image">
-
-                            <img
-                                src="assets/directiva/daniela-loayza-rrhh.png"
-                                alt="Daniela Loayza"
-                            >
-
-                            <div class="image-overlay"></div>
-
-                        </div>
-
-
-                        <div class="member-info">
-
-                            <h3>
-                                Daniela Loayza
-                            </h3>
-
-                            <p class="member-role">
-                                Directora Legal
-                            </p>
-
-                            <p class="member-summary">
-                                RR&HH
-                            </p>
-
-                            <button
-                                class="profile-button"
-                                data-member="3"
-                            >
-                                Ver perfil
-                                <span>→</span>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-                    <!-- PERSONA 5 -->
-
-                    <article class="member-card">
-
-                        <div class="member-image">
-
-                            <img
-                                src="assets/directiva/nataly-aucachi-tecno.png"
-                                alt="Natali Aucachi"
-                            >
-
-                            <div class="image-overlay"></div>
-
-                        </div>
-
-
-                        <div class="member-info">
-
-                            <h3>
-                                Natali Aucachi
-                            </h3>
-
-                            <p class="member-role">
-                                Directora de Tecnologia
-                            </p>
-
-                            <p class="member-summary">
-                                Tecnologia, Innovación
-                            </p>
-
-                            <button
-                                class="profile-button"
-                                data-member="4"
-                            >
-                                Ver perfil
-                                <span>→</span>
-                            </button>
-
-                        </div>
-
-                    </article>
 
 
                 </div>
@@ -449,6 +226,59 @@
 
 </section>
 
+        <!-- ==========================================================
+             COMUNIDAD BOLIVIANA — rama 02, acento amarillo dorado
+             Solo se listan aquí miembros de comunidadBoliviana.
+             ========================================================== -->
+        <section id="comunidad" class="community-directory-section">
+            <div class="container">
+                <header class="directiva-header">
+                    <div class="eyebrow eyebrow-amber">
+                        <span class="eyebrow-line"></span>
+                        02 — Historias que inspiran
+                        <span class="eyebrow-line"></span>
+                    </div>
+                    <h2>
+                        Comunidad <span class="text-amber">Boliviana</span>
+                    </h2>
+                    <p>
+                        Bolivianos estudiando y trabajando alrededor del mundo,
+                        conectados por una misma red.
+                    </p>
+                </header>
+
+                <div class="community-directory-grid" id="communityGrid">
+                    <!-- Se genera dinámicamente desde AEBEX_DATA.comunidadBoliviana en script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================
+             EQUIPO DE PASANTES — rama 03, acento verde esmeralda
+             ========================================================== -->
+        <section id="pasantes" class="interns-section">
+            <div class="container">
+                <header class="directiva-header">
+                    <div class="eyebrow eyebrow-emerald">
+                        <span class="eyebrow-line"></span>
+                        03 — El futuro de AEBEX
+                        <span class="eyebrow-line"></span>
+                    </div>
+                    <h2>
+                        Equipo de <span class="text-emerald">Pasantes</span>
+                    </h2>
+                    <p>
+                        Estudiantes que aportan su talento mientras crecen
+                        junto a la asociación.
+                    </p>
+                </header>
+
+                <div class="interns-grid" id="internsGrid">
+                    <!-- Se genera dinámicamente desde AEBEX_DATA.equipoPasantes en script.js -->
+                </div>
+            </div>
+        </section>
+
 
 <!-- MODAL -->
 
@@ -459,7 +289,7 @@
 >
 
     <div
-        class="modal-backdrop"
+        class="modal-overlay"
         data-close-modal
     ></div>
 
@@ -549,7 +379,7 @@
                 <h4>Navegación</h4>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="about-us.html">Sobre nosotros</a></li>
                 </ul>
             </div>
             <div class="footer-social">
@@ -583,5 +413,4 @@
     <script src="js/script.js"></script>
     
 </body>
-</html>
 </html>
