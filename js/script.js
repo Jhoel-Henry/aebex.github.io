@@ -324,6 +324,22 @@ const AEBEX_DATA = {
       pais: "Bélgica",
       foto: "assets/miembros/rafael-hermoza.jpg",
     },
+    {
+      id: "com-35",
+      nombre: "Andrea Lanza",
+      universidad: "Harvard University",
+      carrera: "Antropología & Arqueología",
+      pais: "Estados Unidos",
+      foto: "assets/miembros/andrea-lanza.jpg",
+    },
+    {
+      id: "com-36",
+      nombre: "Gabriel Sanchez Bozo",
+      universidad: "Lake Forest College",
+      carrera: "Comunicacion & Economia",
+      pais: "Estados Unidos",
+      foto: "assets/miembros/gabriel-sanchez-bozo.jpg",
+    },
   ],
 
   // c) EQUIPO DE PASANTES — Foto, Nombre — acento verde esmeralda
@@ -340,92 +356,82 @@ const AEBEX_DATA = {
     },
     {
       id: "int-3",
-      nombre: "Mariela Arancibia",
-      foto: "assets/pasantes/mariela-arancibia.jpg",
-    },
-    {
-      id: "int-4",
       nombre: "Abigail Osinaga",
       foto: "assets/pasantes/abigail-osinaga.jpg",
     },
     {
-      id: "int-5",
+      id: "int-4",
       nombre: "Jhoel Morales",
       foto: "assets/pasantes/jhoel-morales.jpg",
     },
 
     {
-      id: "int-6",
+      id: "int-5",
       nombre: "Dayana Rodriguez",
       foto: "assets/pasantes/dayana-rodriguez.jpg",
     },
     {
-      id: "int-7",
+      id: "int-6",
       nombre: "Christian Quispe",
       foto: "assets/pasantes/christian-quispe.png",
     },
     {
-      id: "int-8",
+      id: "int-7",
       nombre: "Victoria Alvarado",
       foto: "assets/pasantes/victoria-alvarado.png",
     },
     {
-      id: "int-9",
+      id: "int-8",
       nombre: "Zuleika Colque",
       foto: "assets/pasantes/zuleika-colque.jpg",
     },
     {
-      id: "int-10",
+      id: "int-9",
       nombre: "Nataly Aucachi",
       foto: "assets/pasantes/nataly-aucachi.jpeg",
     },
     {
-      id: "int-11",
+      id: "int-10",
       nombre: "Lorena Santos",
       foto: "assets/pasantes/lorena-santos.jpg",
     },
     {
-      id: "int-12",
+      id: "int-11",
       nombre: "Noelia Sanchez",
       foto: "assets/pasantes/noelia-sanchez.jpg",
     },
     {
-      id: "int-13",
+      id: "int-12",
       nombre: "Ariana Tito",
       foto: "assets/pasantes/ariana-tito.jpg",
     },
     {
-      id: "int-14",
+      id: "int-13",
       nombre: "Tais Alcocer",
       foto: "assets/pasantes/tais-alcocer.jpeg",
     },
     {
-      id: "int-15",
+      id: "int-14",
       nombre: "Abril Ortuño",
       foto: "assets/pasantes/abril-ortuño.jpeg",
     },
     {
-      id: "int-16",
+      id: "int-15",
       nombre: "Malaika Medina",
       foto: "assets/pasantes/malaika-medina.jpg",
     },
     {
-      id: "int-17",
+      id: "int-16",
       nombre: "Serafin Burgulla",
       foto: "assets/pasantes/serafin-burgulla.png",
     },
     {
-      id: "int-18",
+      id: "int-17",
       nombre: "Michelle Omonte",
       foto: "assets/pasantes/michelle-omonte.jpg",
     },
     {
-      id: "int-19",
-      nombre: "Andrea Colque",
-      foto: "assets/pasantes/andrea-colque.jpg",
-    },
-    {
-      id: "int-20",
+      id: "int-18",
       nombre: "Lucia Cuentas",
       foto: "assets/pasantes/lucia-cuentas.jpeg",
     },
@@ -1088,3 +1094,17 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
   }
 });
+
+const valueStackItems = document.querySelectorAll(".values-stack__item");
+if (valueStackItems.length) {
+  const valuesObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-active", entry.isIntersecting);
+      });
+    },
+    { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
+  );
+
+  valueStackItems.forEach((item) => valuesObserver.observe(item));
+}
