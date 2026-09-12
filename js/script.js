@@ -1109,3 +1109,26 @@ if (valueStackItems.length) {
 
   valueStackItems.forEach((item) => valuesObserver.observe(item));
 }
+
+document.querySelectorAll(".webinar-card").forEach((card) => {
+  const maxTilt = 8; // grados
+
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const percentX = (x / rect.width - 0.5) * 2;
+    const percentY = (y / rect.height - 0.5) * 2;
+
+    const rotateY = percentX * maxTilt;
+    const rotateX = -percentY * maxTilt;
+
+    card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px) scale(1.02)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform =
+      "perspective(1200px) rotateX(0) rotateY(0) translateY(0) scale(1)";
+  });
+});

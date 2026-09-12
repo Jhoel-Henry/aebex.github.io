@@ -1,0 +1,207 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AEBEX - Asociación de Estudiantes Bolivianos Estudiando en el Extranjerp
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!--esto es para los logos de facebook, instagram y linkedin-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="tricolor-bar" aria-hidden="true"></div>
+    <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="assets/logo.png" alt="AEBEX Logo" class="logo-img" />
+          <span>AEBEX</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li class="dropdown">
+              <a href="about-us.html" class="dropdown-trigger"
+                >Sobre nosotros <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="about-us.html#quienes-somos">Quiénes somos</a></li>
+                <li>
+                  <a href="about-us.html#directiva">Equipo y Directiva</a>
+                </li>
+                <li>
+                  <a href="about-us.html#comunidad">Comunidad Boliviana</a>
+                </li>
+                <li><a href="about-us.html#pasantes">Equipo de Pasantes</a></li>
+                <li><a href="about-us.html#contacto">Contacto</a></li>
+                <li><a href="about-us.html#aliados">Aliados</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#guide" class="dropdown-trigger"
+                >Guía de estudios <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#guide" onclick="switchGuideTab('usa')"
+                    >Destino: EE. UU.</a
+                  >
+                </li>
+                <li><a href="#scholarships">Directorio de Becas</a></li>
+                <li>
+                  <a href="#guide" onclick="switchGuideTab('resources')"
+                    >Recursos Descargables</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#community" class="dropdown-trigger"
+                >Comunidad <span class="arrow">▾</span></a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#mentors">Programa de mentores</a></li>
+                <li><a href="#projects">Proyectos e investigaciones</a></li>
+              </ul>
+            </li>
+
+            <li><a href="webinars.html">Webinars</a></li>
+
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+
+          <a href="#join" class="btn btn-primary btn-nav">Unirse a AEBEX</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="forum-intro">
+  <div class="forum-intro__bg">
+    
+  </div>
+  <div class="forum-intro__inner">
+    <h2 class="forum-intro__title">¿Qué es AEBEX Forum?</h2>
+    <p class="forum-intro__text">
+      Es una serie de webinars, con <span class="text-accent">bolivianos extraordinarios que inspiren</span>
+      a la siguiente generación con su experiencia, en un formato remoto, accesible y semanal.
+    </p>
+  </div>
+</section>
+
+      <section class="webinars-grid" aria-label="Webinars disponibles">
+        <div class="webinars-grid__inner">
+          <a
+            href="LINK_INSCRIPCION_1"
+            class="webinar-card"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/webinar-1.jpg"
+              alt="Webinar 1"
+              class="webinar-card__img"
+            />
+            <span class="webinar-card__overlay">Inscribirme →</span>
+          </a>
+
+          <a
+            href="LINK_INSCRIPCION_2"
+            class="webinar-card"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/webinar-2.jpg"
+              alt="Webinar 2"
+              class="webinar-card__img"
+            />
+            <span class="webinar-card__overlay">Inscribirme →</span>
+          </a>
+
+          <a
+            href="LINK_INSCRIPCION_3"
+            class="webinar-card"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/webinar-3.jpg"
+              alt="Webinar 3"
+              class="webinar-card__img"
+            />
+            <span class="webinar-card__overlay">Inscribirme →</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span style="font-weight: 700; font-size: 1.2rem; color: #fff;">AEBEX</span>
+                <p>Conectando el talento boliviano con el mundo.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about-us.html">Sobre nosotros</a></li>
+                    <li><a href="webinars.html">Webinars</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+            <h4>Redes Sociales</h4>
+              <div class="social-links">
+              <a href="https://www.linkedin.com/company/aebex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+    
+              <a href="https://www.instagram.com/aebex.bo?fbclid=IwY2xjawT4FDhwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMWRmVjB1WVhLblVONE5TaWVzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEecO5hH4qMv9f-wYRICG1TQyoq3o-Iec5cQVyUMCGh1n2n647mAy46eArLuLk_aem_Qwu4z-uOAVK5Y1JRj36t3g" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+  
+              <a href="https://www.facebook.com/aebex.bo" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            </div>
+            <p class="support-email">
+              Contacto: <span>aebex.bolivia@gmail.com</span>
+            </p>
+          </div>
+            </div>
+        </div>
+        <div class="container copyright" style="text-align: center; color: var(--color-text-muted);">
+            &copy; 2026 AEBEX. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE JAVASCRIPT -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
