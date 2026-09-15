@@ -751,7 +751,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const datosUniversidadesAliados = [
     { logo: "assets/uni-logos/harvard-logo.png", nombre: "Harvard University" },
     {
-      logo: "assets/uni-logos/Duke-University-Logo.jpg",
+      logo: "assets/uni-logos/Duke-University-Logo.png",
       nombre: "Duke University",
     },
     {

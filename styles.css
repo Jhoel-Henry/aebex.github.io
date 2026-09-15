@@ -629,14 +629,8 @@ h1, h2, h3, h4 {
 
 .profile-image {
     position: relative;
-    height: 220px;
+    aspect-ratio: 1 / 1;
     background: var(--bg-elevated);
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .country-tag {
@@ -672,6 +666,9 @@ h1, h2, h3, h4 {
     color: var(--color-text-subtle);
     font-style: italic;
 }
+
+
+
 
 /* ==========================================================================
    8. GUÍA DE ESTUDIOS (PESTAÑAS / TABS INTERACTIVAS)
