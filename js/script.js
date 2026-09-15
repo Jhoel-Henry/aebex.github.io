@@ -187,7 +187,7 @@ const AEBEX_DATA = {
       universidad: "Georgetown University",
       carrera: "Economía Política",
       pais: "Estados Unidos",
-      foto: "assets/miembros/serafin-burgulla.png",
+      foto: "assets/miembros/serafin-burgulla.PNG",
     },
     {
       id: "com-18",
