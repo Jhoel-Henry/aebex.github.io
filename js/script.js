@@ -336,7 +336,7 @@ const AEBEX_DATA = {
     {
       id: "com-36",
       nombre: "Gabriel Sanchez",
-      universidad: "Berea College",
+      universidad: "Lake Forest College",
       carrera: "Comunicación y economía",
       pais: "Estados Unidos",
       foto: "assets/miembros/gabriel-sanchez.png",
