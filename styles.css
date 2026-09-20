@@ -4,7 +4,7 @@
    ========================================================================== */
 
 :root {
-    /* --- Fondo (azul noche, se mantiene como base pedida) --- */
+    /*Fondo (azul noche, se mantiene como base pedida)*/
     --bg-primary: #070C18;
     --bg-secondary: #0E1830;
     --bg-elevated: #121F3D;
@@ -16,7 +16,7 @@
     --color-text-subtle: rgba(248, 250, 252, 0.82);
     --color-text-muted: rgba(248, 250, 252, 0.60);
 
-    /* --- Acento principal: celeste (visible sobre el navy, antes era casi invisible) --- */
+    /* --- Acento principal: celeste --- */
     --accent-blue: #4FB3F5;
     --accent-blue-strong: #7FCBFB;
     --accent-blue-hover: #38BDF8;
@@ -25,7 +25,7 @@
     --border-subtle: rgba(255, 255, 255, 0.12);
     --border-strong: rgba(255, 255, 255, 0.22);
 
-    /* --- Identidad boliviana: usar con intención, no decorativamente --- */
+    /* --- Identidad boliviana:--- */
     --bolivia-red: #D52B1E;
     --bolivia-yellow: #F5C400;
     --bolivia-green: #158A50;
@@ -863,8 +863,9 @@ h1, h2, h3, h4 {
 
 .two-col-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
+    align-items: start;
 }
 
 .sub-section-title {
@@ -881,6 +882,8 @@ h1, h2, h3, h4 {
     border-radius: var(--radius-md);
     margin-bottom: 16px;
     border: 1px solid var(--border-subtle);
+    text-decoration: none;
+    color: inherit;
 }
 
 .event-date {
@@ -1711,14 +1714,17 @@ h1, h2, h3, h4 {
 
 .community-card-image {
     position: relative;
-    height: 170px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
     background: var(--bg-elevated);
 }
-
+ 
 .community-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 
 .country-chip {
