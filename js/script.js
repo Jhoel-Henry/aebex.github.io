@@ -1132,3 +1132,279 @@ document.querySelectorAll(".webinar-card").forEach((card) => {
       "perspective(1200px) rotateX(0) rotateY(0) translateY(0) scale(1)";
   });
 });
+
+/* =====================================================================
+   WEBINARS — ADMINISTRACIÓN
+   ---------------------------------------------------------------------
+   Para agregar un webinar: copia un objeto de la lista y cambia los datos.
+   Para editarlo: modifica sus campos. Para quitarlo: bórralo de la lista.
+   El orden en la página es automático: la fecha más reciente va arriba.
+
+   CAMPOS
+   - color:        "red" | "yellow" | "green"  (color de la tarjeta)
+   - badge:        etiqueta principal, ej. "AEBEX Forum"
+   - edition:      etiqueta secundaria, ej. "2.ª Edición" ("" = ninguna)
+   - title:        título. Usa {{texto}} para resaltarlo con el color de la tarjeta.
+   - tagline:      subtítulo pequeño ("" = ninguno)
+   - description:  lista de párrafos. Usa **texto** para resaltar en amarillo.
+   - note:         texto en cursiva ("" = ninguno)
+   - speaker:      { name, role }
+   - image:        ruta o URL de la imagen del speaker
+   - date:         "AAAA-MM-DD"  (el día de la semana se calcula solo)
+   - time:         texto libre, ej. "19:00 Bolivia | 18:00 Perú"
+   - modality:     ej. "100 % virtual" o "Por Zoom"
+   - certificate:  true | false
+   - pill:         etiqueta pequeña, ej. "Cupos limitados" ("" = ninguna)
+   - registration: "open" (abierta) | "closed" (cerrada)
+   - registerUrl:  enlace del botón de inscripción (si está abierta)
+   ===================================================================== */
+
+const WEBINARS = [
+  /*{
+    id: "motivation-letters-2",
+    color: "green",
+    badge: "TBB Workshop",
+    edition: "2.ª Edición",
+    title: "Motivation Letters for {{International Scholarships}}",
+    tagline: "A pedido del público",
+    description: [
+      "¿Estás preparando tu postulación a una beca y quieres aprender a redactar una carta de motivación que destaque tu perfil? Este taller es para ti.",
+      "En este workshop aprenderás cómo estructurar una **Motivation Letter** efectiva en inglés, qué buscan los comités de selección y cómo transmitir tu historia, objetivos y potencial de manera auténtica y estratégica.",
+    ],
+    note: "Ideal para estudiantes y jóvenes que desean aplicar a programas internacionales, intercambios y becas en el exterior.",
+    speaker: {
+      name: "Alejandra León",
+      role: "Becaria Fulbright · Directora de Tu Beca Bolivia",
+    },
+    image: "img/alejandra-leon.jpg",
+    date: "2026-07-22",
+    time: "19:30 (hora Bolivia)",
+    modality: "100 % virtual",
+    certificate: false,
+    pill: "Cupos limitados",
+    registration: "open",
+    registerUrl: "#",
+  },*/
+  {
+    id: "valeria-gutierrez-polo-norte",
+    color: "green",
+    badge: "AEBEX Forum",
+    edition: "",
+    title:
+      "¿Cómo puedes destacar en el colegio y conseguir una beca que te lleve hasta el {{Polo Norte}}?",
+    tagline: "",
+    description: [
+      "Este domingo, acompáñanos en AEBEX FORUM con Valeria Gutierrez, **campeona olímpica de informática** y primera boliviana en llegar a la Antártida.",
+      "Valeria nos contará sobre su experiencia participando en olimpiadas científicas, competencias internacionales y oportunidades que le permitieron llevar su pasión por la tecnología mucho más lejos.",
+    ],
+    note: "",
+    speaker: {
+      name: "Valeria Gutierrez",
+      role: "Campeona olímpica de informática · Primera boliviana en la Antártida",
+    },
+    image: "assets/webinars/Valeria-gutierrez-1.jpg",
+    date: "2026-08-30",
+    time: "19:00 (GMT-4)",
+    modality: "Por Zoom",
+    certificate: false,
+    pill: "",
+    registration: "closed",
+    registerUrl: "",
+  },
+  {
+    id: "luis-quiroga-universidades",
+    color: "yellow",
+    badge: "AEBEX Forum",
+    edition: "",
+    title:
+      "¿Qué buscan realmente las universidades y cómo puedes {{demostrarlo con tu propia historia}}?",
+    tagline: "",
+    description: [
+      "Luis Quiroga, **graduado de Stanford University** y asesor de más de 50 estudiantes FGLI en sus procesos de admisión, compartirá cómo construyó su perfil y logró destacar con los recursos que tenía.",
+      "Porque las oportunidades cambian, aparecen en lugares inesperados y muchas veces requieren estar dispuesto a tomarlas.",
+    ],
+    note: "",
+    speaker: {
+      name: "Luis Quiroga",
+      role: "Graduado de Stanford University",
+    },
+    image: "assets/webinars/luis-quiroga-2.jpg",
+    date: "2026-09-06",
+    time: "19:00 Bolivia | 18:00 Perú",
+    modality: "Por Zoom",
+    certificate: true,
+    pill: "",
+    registration: "closed",
+    registerUrl: "",
+  },
+  {
+    id: "serafin-burgulla",
+    color: "red",
+    badge: "AEBEX Forum",
+    edition: "",
+    title:
+      "¿Cómo contar tu historia y escribir una {{carta de motivación}} que destaque {{para una beca}}?",
+    tagline: "",
+    description: [
+      "Este domingo, Serafín Burgulla-Marca, ex-estudiante de colegio público y **becado al 100% en EEUU**, compartirá estrategias para convertir tus experiencias en una historia auténtica y construir una carta de motivación con propósito.",
+      "Hablaremos sobre **cómo encontrar tu historia**, destacar tus exeriencias, demostrar quién eres y conectar tus metas con la beca a la que estás aplicando.",
+    ],
+    note: "",
+    speaker: {
+      name: "Serafín Burgulla",
+      role: "Estudiante de Georgetown University · Becado al 100% en EEUU",
+    },
+    image: "assets/webinars/serafin-burgolla-3.jpg",
+    date: "2026-09-13",
+    time: "19:00 Bolivia | 18:00 Perú",
+    modality: "Por Zoom",
+    certificate: true,
+    pill: "",
+    registration: "closed",
+    registerUrl: "",
+  },
+  {
+    id: "joaquin-requena",
+    color: "green",
+    badge: "AEBEX Forum",
+    edition: "",
+    title:
+      "{{Manual del 1%}} ¿Cómo estar dos pasos adelante en la universidad?",
+    tagline: "",
+    description: [
+      "En esta nueva sesión de AEBEX, Joaquín Requena, estudiante en la **University of New Brunswick** compartirá cómo aprovechar oportunidades, recursos y conexiones para sacar el máximo provecho de tu experiencia universitaria.",
+      "Hablaremos sobre **liderazgo, comunicación, creación de contenido** y **cómo empezar a construir oportunidades desde el primer año.**",
+    ],
+    note: "",
+    speaker: {
+      name: "Joaquín Requena",
+      role: "Estudiante de la University of New Brunswick",
+    },
+    image: "assets/webinars/joaquin-requena-4.jpg",
+    date: "2026-09-20",
+    time: "19:00 Bolivia | 18:00 Perú",
+    modality: "Por Zoom",
+    certificate: true,
+    pill: "",
+    registration: "closed",
+    registerUrl: "",
+  },
+
+  {
+    id: "lucia-amattler",
+    color: "yellow",
+    badge: "AEBEX Forum",
+    edition: "",
+    title: "¿Cómo {{conectar tu formación}} en el extranjero con Bolivia?",
+    tagline: "",
+    description: [
+      "En esta nueva sesión de AEBEX, Lucía Amattler, estudiante de **Ciencias Políticas y Relaciones Internacionales en Valencia, España**, compartirá cómo ha combinado su formación internacional con experiencias profesionales en el exterior y su país.",
+      "A partir de su experiencia como pasante en Washington, D.C. y en el Senado de Bolivia, además de su liderazgo en el Club MUN de su universidad, hablará sobre **cómo aprovechar las oportunidades en el extranjero sin perder la conexión con nuestro país**",
+    ],
+    note: "",
+    speaker: {
+      name: "Lucia Amattler",
+      role: "Estudiante de Ciencias Politicas y Relaciones Internacionales en Valencia",
+    },
+    image: "assets/webinars/lucia-amattler-5.jpg",
+    date: "2026-10-11",
+    time: "15:00 Bolivia | 14:00 Perú",
+    modality: "Por Zoom",
+    certificate: true,
+    pill: "",
+    registration: "closed",
+    registerUrl: "",
+  },
+];
+
+/* =====================================================================
+   LÓGICA (normalmente no necesitas modificar nada de aquí hacia abajo)
+   ===================================================================== */
+
+const listEl = document.getElementById("webinars-list");
+
+/* --- utilidades --- */
+const escapeHTML = (s = "") =>
+  s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+
+// {{color de la tarjeta}} y **amarillo**
+const format = (s = "") =>
+  escapeHTML(s)
+    .replace(/\{\{(.+?)\}\}/g, '<span class="accent">$1</span>')
+    .replace(/\*\*(.+?)\*\*/g, "<mark>$1</mark>");
+
+function formatDate(iso) {
+  const d = new Date(iso + "T12:00:00Z");
+  const txt = d.toLocaleDateString("es", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    timeZone: "UTC",
+  });
+  const clean = txt.replace(",", "");
+  return clean.charAt(0).toUpperCase() + clean.slice(1);
+}
+
+const imageTag = (src, alt) =>
+  src
+    ? `<img src="${escapeHTML(src)}" alt="${escapeHTML(alt)}" loading="lazy" onerror="this.remove()">`
+    : "";
+
+const paragraphs = (list = []) =>
+  list.map((p) => `<p>${format(p)}</p>`).join("");
+
+function button(w) {
+  return w.registration === "open"
+    ? `<a class="btn-webinar btn-webinar--open" href="${escapeHTML(w.registerUrl || "#")}" target="_blank" rel="noopener">Inscribirme</a>`
+    : `<button class="btn-webinar btn-webinar--closed" disabled>Inscripciones cerradas</button>`;
+}
+
+/* --- plantilla --- */
+function card(w) {
+  const sp = w.speaker;
+  return `
+  <article class="card-featured accent-${escapeHTML(w.color || "green")}">
+    <div class="badges">
+      ${w.badge ? `<span class="badge">${escapeHTML(w.badge)}</span>` : ""}
+      ${w.edition ? `<span class="badge badge--secondary">${escapeHTML(w.edition)}</span>` : ""}
+    </div>
+    <h3 class="title">${format(w.title)}</h3>
+    ${w.tagline ? `<p class="tagline">${escapeHTML(w.tagline)}</p>` : ""}
+    <div class="desc">${paragraphs(w.description)}</div>
+    ${w.note ? `<p class="note">${escapeHTML(w.note)}</p>` : ""}
+
+    <div class="speaker-photo">
+      ${imageTag(w.image, sp ? sp.name : w.title)}
+      ${
+        sp
+          ? `<div class="speaker-info">
+        <small>SPEAKER</small>
+        <strong>${escapeHTML(sp.name)}</strong>
+        <span>${escapeHTML(sp.role)}</span>
+      </div>`
+          : ""
+      }
+    </div>
+
+    <div class="info-box">
+      <div class="info-row"><span class="ico">📅</span>${escapeHTML(formatDate(w.date))}</div>
+      <div class="info-row"><span class="ico">🕒</span>${escapeHTML(w.time)}</div>
+      <div class="info-row"><span class="ico">📍</span>${escapeHTML(w.modality)}</div>
+      ${w.certificate ? `<div class="info-row"><span class="ico">⭐</span>Certificado de participación incluido</div>` : ""}
+      ${w.pill ? `<span class="pill">${escapeHTML(w.pill)}</span>` : ""}
+    </div>
+    ${button(w)}
+  </article>`;
+}
+
+/* --- render: fecha más reciente arriba --- */
+function render() {
+  const sorted = [...WEBINARS].sort((a, b) => b.date.localeCompare(a.date));
+  listEl.innerHTML = sorted.map(card).join("");
+}
+
+render();
